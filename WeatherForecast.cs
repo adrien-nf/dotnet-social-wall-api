@@ -1,6 +1,6 @@
 using System;
 
-namespace SocialWallApi
+namespace Catalog
 {
     public class WeatherForecast
     {
