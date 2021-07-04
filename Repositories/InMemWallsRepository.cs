@@ -5,7 +5,7 @@ using SocialWallApi.Entities;
 
 namespace SocialWallApi.Repositories
 {
-    public class InMemWallsRepository
+    public class InMemWallsRepository : IWallsRepository
     {
         private readonly List<Wall> walls = new()
         {

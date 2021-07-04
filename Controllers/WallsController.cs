@@ -10,11 +10,11 @@ namespace SocialWallApi.Controllers
     [Route("[controller]")]
     public class WallsController : ControllerBase
     {
-        private readonly InMemWallsRepository repository;
+        private readonly IWallsRepository repository;
 
-        public WallsController()
+        public WallsController(IWallsRepository repository)
         {
-            repository = new InMemWallsRepository();
+            this.repository = repository;
         }
 
         [HttpGet]
