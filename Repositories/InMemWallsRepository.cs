@@ -41,5 +41,22 @@ namespace SocialWallApi.Repositories
         {
             return walls.Where(wall => wall.Id == id).SingleOrDefault();
         }
+
+        public void CreateWall(Wall wall)
+        {
+            walls.Add(wall);
+        }
+
+        public void UpdateWall(Wall wall)
+        {
+            var index = walls.FindIndex(e => e.Id == wall.Id);
+            walls[index] = wall;
+        }
+
+        public void DeleteWall(Guid id)
+        {
+            var index = walls.FindIndex(e => e.Id == id);
+            walls.RemoveAt(index);
+        }
     }
 }

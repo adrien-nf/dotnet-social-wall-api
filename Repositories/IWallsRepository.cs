@@ -8,5 +8,9 @@ namespace SocialWallApi.Repositories
     {
         Wall GetWall(Guid id);
         IEnumerable<Wall> GetWalls();
+
+        void CreateWall(Wall wall);
+        void UpdateWall(Wall wall);
+        void DeleteWall(Guid id);
     }
 }
